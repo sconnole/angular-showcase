@@ -1,15 +1,6 @@
 <!-- src/app/app.component.html -->
 <div class="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors">
-  <header class="p-4 border-b border-gray-300 dark:border-gray-700">
-    <button
-      (click)="toggleDarkMode()"
-      class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded"
-    >
-      Toggle Dark Mode
-    </button>
-  </header>
-
-  <main class="p-4">
-    <router-outlet></router-outlet>
-  </main>
-</div>
+  <app-nav></app-nav>
+<main class="p-4">
+  <router-outlet></router-outlet>
+</main></div>

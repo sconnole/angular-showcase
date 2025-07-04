@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'player',
     loadComponent: () =>
       import('./components/player-dashboard.component').then(
         (m) => m.PlayerDashboardComponent,
