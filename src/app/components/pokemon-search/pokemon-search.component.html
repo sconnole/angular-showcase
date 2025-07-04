@@ -1,0 +1,13 @@
+<div class="w-72">
+  <form (submit)="onSearch()">
+    <input
+
+  name="pokemonName"
+        type="text"
+      placeholder="Enter Pokémon name"
+      [(ngModel)]="query"
+      class="w-full rounded border border-gray-300 px-3 py-2 dark:bg-gray-800 dark:text-white"
+      autocomplete="off"
+    />
+  </form>
+</div>

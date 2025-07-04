@@ -3,17 +3,15 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'player',
-    loadComponent: () =>
-      import('./components/player-dashboard.component').then(
-        (m) => m.PlayerDashboardComponent,
-      ),
+    path: '',
+    redirectTo: 'pokemon/pikachu',
+    pathMatch: 'full',
   },
   {
-    path: 'teams',
+    path: 'pokemon/:name',
     loadComponent: () =>
-      import('./components/team-history.component').then(
-        (m) => m.TeamHistoryComponent,
+      import('./components/pokemon-detail/pokemon-detail.component').then(
+        (m) => m.PokemonDetailComponent,
       ),
   },
 ];

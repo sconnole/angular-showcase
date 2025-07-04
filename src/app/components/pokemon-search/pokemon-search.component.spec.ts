@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TeamHistoryComponent } from './team-history.component';
+import { PokemonSearchComponent } from './pokemon-search.component';
 
-describe('TeamHistoryComponent', () => {
-  let component: TeamHistoryComponent;
-  let fixture: ComponentFixture<TeamHistoryComponent>;
+describe('PokemonSearchComponent', () => {
+  let component: PokemonSearchComponent;
+  let fixture: ComponentFixture<PokemonSearchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TeamHistoryComponent]
+      imports: [PokemonSearchComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TeamHistoryComponent);
+    fixture = TestBed.createComponent(PokemonSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

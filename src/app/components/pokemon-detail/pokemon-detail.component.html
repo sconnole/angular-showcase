@@ -1,0 +1,31 @@
+<div *ngIf="loading" class="text-gray-500">Loading...</div>
+<div *ngIf="error" class="text-red-500">{{ error }}</div>
+
+<div *ngIf="pokemon" class="max-w-md p-4 bg-gray-100 dark:bg-gray-800 rounded shadow">
+  <h2 class="text-3xl font-bold capitalize mb-2">{{ pokemon.name }}</h2>
+
+  <img
+    [src]="pokemon.sprites.front_default"
+    [alt]="pokemon.name"
+    class="w-40 h-40 mx-auto mb-4"
+  />
+
+  <div class="mb-2">
+    <strong>Types:</strong>
+    <span
+      *ngFor="let t of pokemon.types"
+      class="inline-block bg-yellow-300 text-black px-2 py-1 rounded mr-2 capitalize"
+    >
+      {{ t.type.name }}
+    </span>
+  </div>
+
+  <div>
+    <strong>Stats:</strong>
+    <ul>
+      <li *ngFor="let stat of pokemon.stats" class="capitalize">
+        {{ stat.stat.name }}: {{ stat.base_stat }}
+      </li>
+    </ul>
+  </div>
+</div>
