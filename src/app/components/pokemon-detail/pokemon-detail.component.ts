@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+
 import { TypeBadgeComponent } from '../type-badge/type-badge.component';
+import { PokemonSearchComponent } from '../pokemon-search/pokemon-search.component';
 
 @Component({
   selector: 'app-pokemon-detail',
   standalone: true,
-  imports: [CommonModule, TypeBadgeComponent],
+  imports: [CommonModule, PokemonSearchComponent, TypeBadgeComponent],
   templateUrl: './pokemon-detail.component.html',
 })
 export class PokemonDetailComponent implements OnInit {

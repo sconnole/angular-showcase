@@ -14,4 +14,11 @@ export const routes: Routes = [
         (m) => m.PokemonDetailComponent,
       ),
   },
+  {
+    path: 'types/:type',
+    loadComponent: () =>
+      import('./components/type-page/type-page.component').then(
+        (m) => m.TypePageComponent,
+      ),
+  },
 ];

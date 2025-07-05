@@ -1,0 +1,24 @@
+<div class="min-h-screen p-4">
+  <div class="mb-6 flex flex-wrap justify-center gap-2">
+    <app-type-badge
+      *ngFor="let t of typeList"
+      [type]="t"
+    ></app-type-badge>
+  </div>
+
+  <h2 class="text-3xl font-bold capitalize mb-4 text-center">
+    {{ type }} Type Pokémon
+  </h2>
+
+  <div *ngIf="loading" class="text-center text-gray-500">Loading...</div>
+
+  <ul *ngIf="!loading" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <li
+      *ngFor="let name of pokemonList"
+      class="bg-white dark:bg-gray-800 rounded p-3 shadow text-center capitalize hover:bg-yellow-100 dark:hover:bg-gray-700 transition"
+      [routerLink]="['/pokemon', name]"
+    >
+      {{ name }}
+    </li>
+  </ul>
+</div>
